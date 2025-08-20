@@ -4,24 +4,24 @@
 
 The following Brave features are explicitly disabled:
 
-| Feature                         | Registry Key                       | Status    |
+| Feature                         | Policy                            | Status    |
 |---------------------------------|------------------------------------|-----------|
 | Brave Rewards                   | `BraveRewardsDisabled`            | Disabled  |
 | Brave Wallet                    | `BraveWalletDisabled`             | Disabled  |
 | Brave VPN                       | `BraveVPNDisabled`                | Disabled  |
 | Brave AI Chat                   | `BraveAIChatEnabled`              | Disabled  |
-| Google Drive Integration        | `DriveDisabled`                   | Disabled  |
+<!--- | Google Drive Integration        | `DriveDisabled`                   | Disabled  |--->
 | Password Manager                | `PasswordManagerEnabled`          | Disabled  |
 | Password Sharing                | `PasswordSharingEnabled`          | Disabled  |
 | Password Leak Detection         | `PasswordLeakDetectionEnabled`    | Disabled  |
 | Quick Answers                   | `QuickAnswersEnabled`             | Disabled  |
-| Parcel Tracking                 | `ParcelTrackingEnabled`           | Disabled  |
-| Shopping List                   | `ShoppingListEnabled`             | Disabled  |
-| Guest Mode                      | `BrowserGuestModeEnabled`         | Disabled  |
-| Browser Sign-in                 | `BrowserSignin`                   | Disabled  |
-| Built-in DNS Client             | `BuiltInDnsClientEnabled`         | Disabled  |
-| Set as Default Browser          | `DefaultBrowserSettingEnabled`    | Disabled  |
-| Background Mode                 | `BackgroundModeEnabled`           | Disabled  |
+<!--| Parcel Tracking                 | `ParcelTrackingEnabled`           | Disabled  |-->
+<!--| Shopping List                   | `ShoppingListEnabled`             | Disabled  |-->
+<!--| Guest Mode                      | `BrowserGuestModeEnabled`         | Disabled  |-->
+<!--| Browser Sign-in                 | `BrowserSignin`                   | Disabled  |-->
+<!-- | Built-in DNS Client             | `BuiltInDnsClientEnabled`         | Disabled  |-->
+<!-- | Set as Default Browser          | `DefaultBrowserSettingEnabled`    | Disabled  |-->
+<!--| Background Mode                 | `BackgroundModeEnabled`           | Disabled  |-->
 | Autofill Credit Cards           | `AutofillCreditCardEnabled`       | Disabled  |
 
 ---
@@ -51,9 +51,9 @@ These default settings control how Brave handles specific browser API permission
 |----------------------------|----------------------------------|--------|--------------------|
 | Geolocation                | `DefaultGeolocationSetting`     | `2`    | Ask on use         |
 | Notifications              | `DefaultNotificationsSetting`   | `2`    | Ask on use         |
-| Local Fonts                | `DefaultLocalFontsSetting`      | `2`    | Ask on use         |
+<!--| Local Fonts                | `DefaultLocalFontsSetting`      | `2`    | Ask on use         |-->
 | Sensors                    | `DefaultSensorsSetting`         | `2`    | Ask on use         |
-| Serial Port Access         | `DefaultSerialGuardSetting`     | `2`    | Ask on use         |
+<!--| Serial Port Access         | `DefaultSerialGuardSetting`     | `2`    | Ask on use         |-->
 
 ---
 
