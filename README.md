@@ -57,6 +57,27 @@ These default settings control how Brave handles specific browser API permission
 
 ---
 
+## Usage on macOS
+
+A helper script [`cleanbrave.sh`](./cleanbrave.sh) is included to apply these policies automatically
+to Brave’s managed preferences.
+
+The script:
+
+- Ensures `/Library/Managed Preferences/` exists with correct `root:wheel` ownership and `755` permissions.
+- Creates/updates `/Library/Managed Preferences/com.brave.Browser.plist`.
+- Sets all the policies listed above (disabled features, telemetry off, default prompts).
+- Will update keys if they already exist (idempotent, no duplicates).
+- Prints out which keys were added/updated.
+
+### Running
+
+> ⚠️ Please close Brave before running the script.
+
+```bash
+chmod +x cleanbrave.sh
+sudo ./cleanbrave.sh
+
 ##  Notes
 Will upate this later too be mac specfi about about plist settings
 
