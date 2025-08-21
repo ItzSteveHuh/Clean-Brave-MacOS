@@ -43,9 +43,7 @@ These default settings control how Brave handles specific browser API permission
 |----------------------------|----------------------------------|--------|--------------------|
 | Geolocation                | `DefaultGeolocationSetting`     | `2`    | Ask on use         |
 | Notifications              | `DefaultNotificationsSetting`   | `2`    | Ask on use         |
-<!--| Local Fonts                | `DefaultLocalFontsSetting`      | `2`    | Ask on use         |-->
 | Sensors                    | `DefaultSensorsSetting`         | `2`    | Ask on use         |
-<!--| Serial Port Access         | `DefaultSerialGuardSetting`     | `2`    | Ask on use         |-->
 
 ---
 
@@ -74,7 +72,6 @@ The script:
 
 > ⚠️ Please close Brave before running the script.
 
-```bash
 chmod +x cleanbrave.sh
 sudo ./cleanbrave.sh
 
@@ -82,3 +79,9 @@ sudo ./cleanbrave.sh
 Will upate this later too be mac specfi about about plist settings
 
 This configuration is intended to maximize user privacy and minimize online tracking or feature creep in Brave browser.
+
+---
+
+## Credits
+
+Thanks to **Mojszli** for the inspiration to create a macOS version and for the base README template.
