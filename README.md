@@ -58,10 +58,6 @@ These default settings control how Brave handles specific browser API permission
 ---
 
 ##  Notes
-
-- All `dword:00000000` = Disabled
-- All `dword:00000001` = Enabled
-- All `dword:00000002` = Prompt (Ask) for permission
-- Empty strings like `""` indicate no reporting endpoint configured
+Will upate this later too be mac specfi about about plist settings
 
 This configuration is intended to maximize user privacy and minimize online tracking or feature creep in Brave browser.
