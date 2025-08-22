@@ -71,12 +71,23 @@ The script:
 ### Running
 
 > ⚠️ Please close Brave before running the script.
-
+> Please note the channel flags below if you have other channels besides stable branch you will need to apply the appropriate switch below otherwise it defaults to stable branch
 chmod +x cleanbrave.sh
+
+# Stable (default)
 sudo ./cleanbrave.sh
 
+# Explicit stable
+sudo ./cleanbrave.sh --channel=stable
+
+# Beta
+sudo ./cleanbrave.sh --channel=beta
+
+# Nightly
+sudo ./cleanbrave.sh --channel=nightly
+
 ##  Notes
-Will upate this later too be mac specfi about about plist settings
+Will upate this later too be mac specific about about plist settings
 
 This configuration is intended to maximize user privacy and minimize online tracking or feature creep in Brave browser.
 

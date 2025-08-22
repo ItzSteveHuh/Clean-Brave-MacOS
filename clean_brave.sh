@@ -1,10 +1,24 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-BUNDLE_ID="${BUNDLE_ID:-com.brave.Browser}"  # com.brave.Browser.beta / .nightly if needed
+# Default bundle ID (stable)
+BUNDLE_ID="com.brave.Browser"
+
+# Parse optional --channel flag
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --channel=stable)  BUNDLE_ID="com.brave.Browser";;
+    --channel=beta)    BUNDLE_ID="com.brave.Browser.beta";;
+    --channel=nightly) BUNDLE_ID="com.brave.Browser.nightly";;
+    --channel=*) echo "Unknown channel: ${1#--channel=}"; exit 1;;
+    *) break;;
+  esac
+  shift
+done
+
 MANAGED_DIR="/Library/Managed Preferences"
 PLIST="${MANAGED_DIR}/${BUNDLE_ID}.plist"
-PB="/usr/libexec/PlistBuddy"
+
 
 ensure() {
   # Create /Library/Managed Preferences with correct perms if missing
