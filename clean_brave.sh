@@ -18,6 +18,9 @@ done
 
 MANAGED_DIR="/Library/Managed Preferences"
 PLIST="${MANAGED_DIR}/${BUNDLE_ID}.plist"
+# Path to PlistBuddy (allow override via env)
+PB="${PB:-/usr/libexec/PlistBuddy}"
+
 
 
 ensure() {
@@ -28,9 +31,12 @@ ensure() {
     sudo chmod 755 "$MANAGED_DIR"
   fi
 
-  # Ensure the plist file exists
-  [[ -f "$PLIST" ]] || sudo /usr/bin/touch "$PLIST"
+  # Ensure the plist exists AND is a valid XML plist (not zero-length)
+  if [[ ! -f "$PLIST" || ! -s "$PLIST" ]]; then
+    sudo /usr/bin/plutil -create xml1 "$PLIST"
+  fi
 }
+
 
 
 set_key() { # set_key <key> <type> <value>
