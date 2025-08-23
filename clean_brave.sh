@@ -73,7 +73,6 @@ main() {
   set_key AutofillCreditCardEnabled    bool false
 
   # ===== Telemetry & reporting (disabled) =====
-  set_key CloudReportingEnabled                bool false
   set_key SafeBrowsingExtendedReportingEnabled bool false
   set_key SafeBrowsingSurveysEnabled           bool false
   set_key SafeBrowsingDeepScanningEnabled      bool false
@@ -87,7 +86,6 @@ main() {
   set_key ReportDeviceSystemInfo               bool false
   set_key ReportDeviceUsers                    bool false
   set_key ReportWebsiteTelemetry               bool false
-  set_key MetricsReportingEnabled              bool false
 
   # ===== Default permissions (Ask on use = 2) =====
   set_key DefaultGeolocationSetting   integer 2
