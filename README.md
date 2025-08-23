@@ -55,36 +55,31 @@ These default settings control how Brave handles specific browser API permission
 
 ---
 
-## Usage on macOS
+## Usage on macOS (User Preferences)
 
-A helper script [`cleanbrave.sh`](./cleanbrave.sh) is included to apply these policies automatically
-to Brave’s managed preferences.
+This branch of the script writes Brave’s policy keys into the **user preferences domain**  
+(`~/Library/Preferences/com.brave.Browser*.plist`) instead of the managed system domain.
 
-The script:
-
-- Ensures `/Library/Managed Preferences/` exists with correct `root:wheel` ownership and `755` permissions.
-- Creates/updates `/Library/Managed Preferences/com.brave.Browser.plist`.
-- Sets all the policies listed above (disabled features, telemetry off, default prompts).
-- Will update keys if they already exist (idempotent, no duplicates).
-- Prints out which keys were added/updated.
+### Key points
+- Settings **persist across reboots** because they live in your user prefs.
+- They appear in `brave://policy` as **OK (recommended)**, not **Policy Enforced**.
+- No root or sudo required — everything runs in the user context.
+- Works with **Stable**, **Beta**, and **Nightly** via the `--channel` flag.
 
 ### Running
 
-> ⚠️ Please close Brave before running the script.
-> Please note the channel flags below if you have other channels besides stable branch you will need to apply the appropriate switch below otherwise it defaults to stable branch
-chmod +x cleanbrave.sh
+```bash
+chmod +x clean_brave.sh
 
 # Stable (default)
-sudo ./cleanbrave.sh
-
-# Explicit stable
-sudo ./cleanbrave.sh --channel=stable
+./clean_brave.sh
 
 # Beta
-sudo ./cleanbrave.sh --channel=beta
+./clean_brave.sh --channel=beta
 
 # Nightly
-sudo ./cleanbrave.sh --channel=nightly
+./clean_brave.sh --channel=nightly
+
 
 ##  Notes
 Will upate this later too be mac specific about about plist settings
