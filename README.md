@@ -82,8 +82,16 @@ chmod +x clean_brave.sh
 
 
 ##  Notes
-Will upate this later too be mac specific about about plist settings
-
+- Some Chromium policy keys aren’t honored by Brave unless the browser is
+  enrolled in **Brave Browser Cloud Management** (MDM/enterprise environment).
+- Specifically:
+  - `CloudReportingEnabled` → Ignored with the message  
+    *"Ignored because the machine is not enrolled with Brave Browser Cloud Management."*
+  - `MetricsReportingEnabled` → Blocked with the message  
+    *"This policy is blocked, its value will be ignored."*
+- These keys have been removed from the script to avoid noisy errors in
+  `brave://policy`.
+  
 This configuration is intended to maximize user privacy and minimize online tracking or feature creep in Brave browser.
 
 ---
